@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/p_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css">
+
+</head>
+
+<body>
+    <div class="parent-porfolio">
+        <aside style="width: 36%;height: 100%;">
+            <div class="ps-sticky">
+                <div class="site-sidebar">
+                    <div class="profile-head">
+                        <a href="">
+                            <div class="person-avathar">
+                                <img src="images\Profile_pic.jpeg" alt="profile" class="avatar">
+                            </div>
+                            <div class="title-name">
+                                <h1>Pavan Kumar Puppala (1616)</h1>
+                                <h2>Software Engineer</h2>
+                            </div>
+                        </a>
+                        <nav class="main-navigation">
+                            <div class="nav-list">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0)" class="tab" onclick="loadContent('offer.html')">
+                                            Offers
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a href="javascript:void(0)" class="tab" onclick="loadContent('portfolio.html')">
+                                            Portfolio
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="tab" onclick="loadContent('contact.html')">
+                                            Hire me
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="cv.html" class="tab" target="_parent">
+                                            CV
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cv-download">
+                                <ul>
+                                    <li>
+                                        <button id="download-CV">Download CV as PDF</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="bolg-socialmedia">
+                            <div class="social">
+                                <h1> Get in Touch</h1>
+                            </div>
+                            <div>
+                                <div class="bolg-socialmedia-list">
+                                    <a rel="me" href="mailto:Pavanpuppala1616@gmail.com"
+                                        class="button button-icon u-email" title="mail: Pavanpuppala1616@gmail.com">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="https://instagram.com/yourusername" target="_parent">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://github.com/pavankumarpuppala" target="_parent">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://in.linkedin.com/in/pavan1616" target="_parent">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div id="content">
+
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@0.4.1/dist/html2canvas.min.js"></script>
+    <div id="main-content" style="display: none;">
+        <!-- Frontend CV content (not shown) -->
+        <!-- Hidden CV content for document download (will not show on frontend) -->
+        <div id="cv-wrapper" class="cv-wrapper">
+            <div class="cv-card">
+                <div class="cv-header">
+                    <div class="profile-image">
+                        <!-- Placeholder for profile image, can be replaced with real image -->
+                    </div>
+                    <div class="profile-summary">
+                        <h1>Pavan Kumar Puppala</h1>
+                        <h2>Full-stack Software Engineer</h2>
+                        <p>Experienced .NET Developer with <b>2+ years in .NET Core, AngularJS, Angular 16, and SQL.</b>
+                            Skilled in all development phases, ensuring performance, quality, security, and user-centric
+                            solutions.
+                        </p>
+                    </div>
+                    <div class="contact-info">
+                        <p><a href="mailto:Pavanpuppala1616@gmail.com">Pavanpuppala1616@gmail.com</a></p>
+                        <p><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+                        <p><a href="https://www.yourwebsite.com" target="_blank">Portfolio</a></p>
+                    </div>
+                </div>
+
+                <div class="expertise">
+                    <div class="expertise-header">Skills</div>
+                    <div class="expertise-list">
+                        <p><b>Languages:</b> C#, TypeScript, SQL</p>
+                        <p><b>Front-end:</b> Angular (V16), AngularJS, HTML, CSS, Bootstrap</p>
+                        <p><b>Back-end:</b> .NET Core, ASP.NET, ADO .NET, Entity Framework</p>
+                        <p><b>Web Services:</b> Web API, API Integration, RESTful Services</p>
+                        <p><b>Tools & Environment:</b> Visual Studio, VS Code, SSMS, GitHub</p>
+                    </div>
+                </div>
+
+                <div class="job-history">
+                    <div class="job-header">Experience</div>
+                    <div class="job-entry">
+                        <div class="job-date">
+                            <a href="#">Fixity Tech. Pvt. Ltd</a>
+                            <p>Jul’2022 - Jan’2023</p>
+                        </div>
+                        <div class="job-description">
+                            <h1>Jr .NET Developer</h1>
+                            <p>Developed scalable <b>Healthcare Solutions with .NET Core, Angular, and SQL Server</b>
+                                for enhanced performance and efficiency.</p>
+                            <ul>
+                                <li>Developed healthcare management solutions using .NET Core, Angular, and SQL Server.
+                                </li>
+                                <li>Designed responsive UIs, improving user experience across platforms.</li>
+                                <li>Integrated real-time data processing with SQL Server to enhance operational
+                                    efficiency.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="job-entry">
+                        <div class="job-date">
+                            <a href="#">Ehnote Softlabs (P) LTD.</a>
+                            <p>Feb’2023 - Mar’2024</p>
+                        </div>
+                        <div class="job-description">
+                            <h1>Software Engineer</h1>
+                            <p>Developed scalable healthcare solutions with <b>.NET Core, Angular, and SQL Server</b>
+                            </p>
+                            <ul>
+                                <li>Developed and maintained scalable solutions for healthcare management.</li>
+                                <li>Designed responsive UIs with Angular/AngularJS to enhance accessibility.</li>
+                                <li>Utilized real-time data processing to improve decision-making efficiency.</li>
+                                <li>Applied agile methodologies for iterative software updates and testing.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="academic-qualification">
+                    <div class="job-header">Education</div>
+                    <div class="academic-entry">
+                        <div class="academic-date">
+                            <a href="#">M.Tech</a>
+                            <p>2022-2023</p>
+                        </div>
+                        <div class="academic-description">
+                            <h1>Master's Degree</h1>
+                            <p><b>Computer Science and Engineering (CSE)</b></p>
+                            <ul>
+                                <li>Completed Master’s degree under Jawaharlal Nehru Technological University Kakinada
+                                    (JNTUK), specializing in advanced software development.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="academic-entry">
+                        <div class="academic-date">
+                            <a href="#">B.Tech</a>
+                            <p>2018-2022</p>
+                        </div>
+                        <div class="academic-description">
+                            <h1>Bachelor of Technology</h1>
+                            <p><b>Computer Science and Engineering (CSE)</b></p>
+                            <ul>
+                                <li>Completed Bachelor's degree in CSE under Jawaharlal Nehru Technological University
+                                    Kakinada (JNTUK).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('download-CV').addEventListener('click', function () {
+            const content = document.getElementById('cv-wrapper');  // Content for document download
+
+            // Temporarily make the content visible for rendering in the PDF
+            content.style.display = 'block';
+
+            const opt = {
+                margin: [0.2, 0.5, 0.5, 0.5],
+                filename: 'CV_Pavan_Kumar_Puppala.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'letter',
+                    orientation: 'portrait'
+                }
+            };
+
+            // Generate the PDF
+            html2pdf().set(opt).from(content).save().then(() => {
+                // Hide the content again after generating the PDF
+                content.style.display = 'none';
+            });
+        });
+    </script>
+
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Frontend visible content styles */
+        #main-content {
+            text-align: center;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+
+        #main-content h1 {
+            font-size: 10px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* CV Document Styles */
+        .cv-wrapper {
+            /* display: none; */
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: linear-gradient(145deg, #ffffff, #f1f1f1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* CV Header */
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .profile-image img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-summary {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .profile-summary h1 {
+            font-size: 26px;
+            color: #BB1E1E;
+            margin-bottom: 10px;
+        }
+
+        .profile-summary h2 {
+            font-size: 20px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .profile-summary p {
+            font-size: 16px;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #BB1E1E;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #007BFF;
+        }
+
+        /* Skills Section */
+        .expertise {
+            margin-top: 30px;
+        }
+
+        .expertise-header {
+            font-size: 24px;
+            color: #BB1E1E;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #BB1E1E;
+            padding-bottom: 10px;
+        }
+
+        .expertise-list {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Experience Section */
+        .job-history {
+            margin-top: 30px;
+        }
+
+        .job-header {
+            font-size: 24px;
+            color: #BB1E1E;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #BB1E1E;
+            padding-bottom: 10px;
+        }
+
+        .job-entry {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .job-date {
+            flex: 1;
+            font-size: 16px;
+            color: #777;
+        }
+
+        .job-description {
+            flex: 3;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .job-description h1 {
+            font-size: 20px;
+            color: #BB1E1E;
+        }
+
+        .job-description ul {
+            margin-top: 10px;
+        }
+
+        .job-description li {
+            margin-bottom: 8px;
+        }
+
+        /* Education Section */
+        .academic-qualification {
+            margin-top: 30px;
+        }
+
+        .academic-entry {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .academic-header {
+            font-size: 24px;
+            color: #BB1E1E;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #BB1E1E;
+            padding-bottom: 10px;
+        }
+
+        .academic-date {
+            flex: 1;
+            font-size: 16px;
+            color: #777;
+        }
+
+        .academic-description {
+            flex: 3;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .academic-description ul li {
+            list-style: none;
+        }
+
+        .cv-download>ul>li {
+            list-style: none;
+            margin : 10px 10px;
+        }
+
+        .cv-download>ul>li button {
+            background-color: rgba(145, 13, 13, .8);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cv-download>ul>li button:hover {
+            background-color: rgba(209, 25, 25, 1);
+            transform: scale(1.05);
+        }
+
+        .cv-download>ul>li button:focus {
+            outline: 3px solid #fff;
+        }
+
+        .cv-download>ul {
+            padding-left: 0;
+            margin: 0;
+        }
+    </style>
+
+
+
+</body>
+
+</html>

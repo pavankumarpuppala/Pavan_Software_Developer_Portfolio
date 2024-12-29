@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+#content {
+    width: 100%;
+    background-color: #fff;
+    overflow-x: scroll;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.parent-porfolio {
+    display: flex;
+    height: 100vh;
+}
+
+.site-sidebar {
+    /* width: 25%; */
+    background-color: #fff;
+    height: 100vh;
+    border: 1px solid black;
+    background-color: rgba(145, 13, 13, .8);
+    position: sticky;
+    top: 0;
+}
+
+.site-main {
+    width: 100%;
+    background-color: #fff;
+}
+
+.main-section {
+    padding: 50px;
+    background-color: #fff;
+    color: #333;
+}
+
+.Portfolio-timeline {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.Portfolio-timeline ul {
+    list-style: none;
+    line-height: 1.6;
+}
+
+.companylist {
+    display: flex;
+    margin: 10px;
+
+}
+
+.companylist>a {
+    text-decoration: none;
+    padding: 20px 30px;
+    color: #777;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.companylist>a:hover {
+    color: rgba(145, 13, 13, .8);
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.timeline {
+    list-style: none;
+    font: 16px / 1.6 Roboto, Helvetica, sans-serif;
+    font-weight: 300;
+    color: #777;
+}
+.timeline>h3{
+    color: black;
+}
+
+hr {
+    margin: 3% 0 3% 0;
+}
+
+.pro-project {
+    display: flex;
+}
+
+.myprojects {
+    font: 16px / 1.6 Roboto, Helvetica, sans-serif;
+    font-weight: 300;
+    width: 50%;
+    color: #777;
+    line-height: 2em;
+}
+
+.project-skill {
+    color: #777;
+    list-style: square;
+}
+
+.myprojects-Image {
+    width: 50%;
+}
+
+.myprojects-Image>a>img {
+    width: 100%;
+}
+
+.prog-title {
+    transition: all 0.3s ease;
+    font-weight: bold;
+    color: black;
+}
+
+.prog-title:hover {
+    color: rgba(145, 13, 13, .8);
+    text-decoration: underline;
+}
+
+.profile-head {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    padding: 45px 40px;
+}
+
+.profile-head>a {
+    text-decoration: none;
+}
+
+.person-avathar {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.avatar {
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+}
+
+.title-name>h1 {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.title-name>h1:hover {
+    color: rgba(255, 255, 255, 1);
+    /* Change color to full white on hover */
+    font-size: 21px;
+    /* Increase font size on hover */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    /* Add text shadow */
+    color: #fff;
+}
+
+.title-name>h2 {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.title-name>h2:hover {
+    color: rgba(255, 255, 255, 1);
+    /* Change color to full white on hover */
+    font-size: 18px;
+    /* Increase font size on hover */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    /* Add text shadow */
+    color: #fff;
+}
+
+.main-navigation {
+    line-height: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav-list>ul {
+    list-style: none;
+    text-align: left;
+    margin: 30px;
+    color: rgba(255, 255, 255, .6);
+}
+.nav-list>ul>li>a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .6);
+}
+.nav-list>ul>li.active a {
+    color: white; 
+  }
+
+
+.bolg-socialmedia {
+    margin: 20px;
+    font-size: 15px;
+}
+
+.bolg-socialmedia-list {
+    margin-top: 10px;
+}
+
+.bolg-socialmedia-list>a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .6);
+    font-size: 20px;
+}
+
+.ps-sticky {
+    position: sticky;
+    top: 0;
+}
+
+aside {
+    transition: all 0.3s ease-in-out;
+    display: block;
+    /* Ensure the sidebar is visible by default */
+}
+
+/* Add this to your style.css */
+.show-cv aside {
+    display: none;
+    /* Hides the sidebar */
+}
+
+.show-cv #content {
+    width: 100%;
+    /* Make content area take up full width */
+}
+
+/* Optionally, if you want to hide other UI components like the header */
+.show-cv header {
+    display: none;
+}
+
+.social>h1 {
+    color: rgba(255, 255, 255, .6);
+    font-size: 20px;
+}
+
+.linkclass {
+    color: #BB1E1E;
+    margin: 6px;
+    text-decoration: none;
+}
+
+.ReadMore {
+    color: white;
+    margin: 20px;
+    width: 100px;
+    height: 35px;
+    background-color: #BB1E1E;
+    border: none;
+    border-radius: 5px;
+}

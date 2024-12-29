@@ -1,0 +1,602 @@
+<button id="download-CV">Download CV as PDF</button>
+<div id="content">
+    <div class="cv">
+        <div class="cv-head">
+            <div class="profile-pic">
+                <img src="images/Resume_pic.jpeg" alt="img">
+            </div>
+            <div class="profile-info">
+                <h1>Pavan kumar puppala</h1>
+                <h2>Full-stack Software Engineer</h2>
+                <p> Experienced .NET Developer with <b> 2+ years in .NET Core,<br> AngularJS, Angular 16, and SQL.</b>
+                    Skilled in all development phases, <br>ensuring performance, quality, security, and user-centric
+                    solutions.
+                </p>
+            </div>
+            <div class="profile-details">
+                <p><a href="" title="Pavanpuppala1616@gmail.com">Pavanpuppala1616</a></p>
+                <p><a href="linkedin" title="linkedin">linkedin</a></p>
+                <p><a href="domain" title="domain">domain</a></p>
+            </div>
+        </div>
+        <div class="skills">
+            <!-- skillss -->
+            <div class="skills-title">
+                Skills
+            </div>
+            <div>
+                <p><b>Languages :</b> c# , TypeScript, SQL </p>
+                <p><b>Front-end :</b> Angular(V16), AngularJS, Html, css, Bootstrap</p>
+                <p><b>Back-end :</b>.Net core, Asp Dotent, ADO .Net, Entity Framework</p>
+                <p><b>Web services :</b>Web API, API Integration, Restful Services</p>
+                <p><b>Tools & Environment :</b>Visuval Studio, VS Code, SSMS, Github</p>
+            </div>
+        </div>
+        <div class="experience">
+            <div class="exp-title">Experience</div>
+            <div class="exp-info">
+                <div class="exp-time">
+                    <a href="">Fixity Tech. Pvt. Ltd </a>
+                    <p>Jul’2022 - Jan’2023</p>
+                </div>
+                <div class="exp-detials">
+                    <h1>Jr Dotnet Developer</h1>
+                    <p>Developed Scalable <b> Healthcare Solutions with .NET Core, Angular, and SQL Server </b> for
+                        Enhanced Performance and Efficiency</p>
+                    <ul>
+                        <li>Spearheaded development of healthcare management solutions using .NET Core, Angular, and SQL
+                            Server, ensuring robust performance.</li>
+                        <li>Designed responsive UIs with Angular/AngularJS, improving user experience across platforms
+                        </li>
+                        <li>Integrated real-time data processing and reporting with SQL Server, enhancing
+                            decision-making and operational efficiency.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exp-info">
+                <div class="exp-time">
+                    <a href="">Ehnote Softlabs (P) LTD.</a>
+                    <p>Feb’2023 - Mar’2024</p>
+                </div>
+                <div class="exp-detials">
+                    <h1>Software Engineer</h1>
+                    <p>Developed Scalable Healthcare Solutions with <b>.NET Core, Angular, and SQL Server </b></p>
+                    <ul>
+                        <li>Developed and maintained scalable healthcare management solutions using .NET Core, Angular,
+                            and SQL Server for high performance.</li>
+                        <li>Designed responsive UIs with Angular/AngularJS, enhancing user experience and accessibility.
+                        </li>
+                        <li>Integrated real-time data processing and reporting with SQL Server to improve
+                            decision-making and operational efficiency.
+                        </li>
+                        <li>Applied agile methodologies for iterative software updates, testing, and contributed to
+                            documentation and knowledge sharing.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="education">
+            <div class="exp-title">Education</div>
+            <div class="exp-info">
+                <div class="exp-time">
+                    <a href="">M.Tech</a>
+                    <p>2022-2023</p>
+                </div>
+                <div class="exp-detials">
+                    <h1>Master's Degree</h1>
+                    <p><b>Computer Science and Engineering (CSE)</b>
+                    </p>
+                    <ul>
+                        <li>Completed Master's degree under Jawaharlal Nehru Technological University Kakinada (JNTUK),
+                            at RK College, specializing in advanced software development, data structures, algorithms,
+                            and systems design.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exp-info">
+                <div class="exp-time">
+                    <a href="">B.Tech</a>
+                    <p>2022-2023</p>
+                </div>
+                <div class="exp-detials">
+                    <h1>Bachelor of Technology</h1>
+                    <p><b>Computer Science and Engineering (CSE)</b>
+                    </p>
+                    <ul>
+                        <li>Completed Bachelor's degree in Computer Science and Engineering (CSE) under Jawaharlal Nehru
+                            Technological University Kakinada (JNTUK), at RK College.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Include html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@0.4.1/dist/html2canvas.min.js"></script>
+
+    <style>
+        body {
+            background-color: #c1c1c1;
+            font-family: Arial, sans-serif;
+            /* background-color: #f4f4f4; */
+        }
+
+        .cv {
+            width: 920px;
+            padding: 80px 80px 60px;
+            margin: 80px auto;
+            background-color: #fff;
+            box-shadow: 0px 0px 5px 5px rgba(96, 96, 96, 0.5);
+        }
+
+        .cv-head {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .profile-pic>img {
+            border-radius: 2px;
+            height: 150px;
+        }
+
+        .profile-info>h1 {
+            margin-top: 0px;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+            color: #BB1E1E;
+        }
+
+        .profile-info>h2 {
+            margin-top: 0px;
+            display: block;
+            text-transform: none;
+            font-size: 25px;
+            font-weight: 300;
+            margin-bottom: 5px;
+            color: #777;
+        }
+
+        .profile-info>p {
+            font-size: 17px;
+            color: #777;
+        }
+
+        .profile-details {
+            border-left: 1px solid #777;
+            ;
+            color: #777;
+            height: 100px;
+        }
+
+        .skills {
+            margin-top: 1.5em;
+            padding-left: 25%;
+            color: #777;
+        }
+
+        .skills-title {
+            color: #BB1E1E;
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 15px;
+            page-break-after: avoid;
+        }
+
+        .education {
+            margin-top: 1.5em;
+        }
+
+        .experience {
+            margin-top: 1.5em;
+        }
+
+        .exp-title {
+            color: #BB1E1E;
+            font-size: 24px;
+            padding-left: 25%;
+            font-weight: 300;
+            margin-bottom: 15px;
+            page-break-after: avoid;
+        }
+
+        .exp-time {
+            float: left;
+            width: 23%;
+            text-align: right;
+            padding-right: 15px;
+            color: #777;
+            font-size: 15px;
+        }
+
+        .exp-time>a {
+            text-decoration: none;
+            background-color: #eee;
+            padding: 3px 7px;
+            margin-bottom: 5px;
+            border-radius: 2px;
+        }
+
+        .exp-detials {
+            padding-left: 25%;
+            color: #777;
+            font-size: 16px;
+        }
+
+        .exp-detials>h1 {
+            color: #777;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .exp-detials>ul li,
+        p {
+            line-height: 1.5em;
+        }
+
+        .profile-details>p>a {
+            text-decoration: none;
+            padding-left: 10px;
+            color: #777;
+        }
+    </style>
+
+
+    <!-- for only document -->
+
+    <div id="main-content" style="display: none;">
+        <!-- Frontend CV content (not shown) -->
+        <!-- Hidden CV content for document download (will not show on frontend) -->
+        <div id="cv-wrapper" class="cv-wrapper">
+            <div class="cv-card">
+                <div class="cv-header">
+                    <div class="profile-image">
+                        <!-- Placeholder for profile image, can be replaced with real image -->
+                    </div>
+                    <div class="profile-summary">
+                        <h1>Pavan Kumar Puppala</h1>
+                        <h2>Full-stack Software Engineer</h2>
+                        <p>Experienced .NET Developer with <b>2+ years in .NET Core, AngularJS, Angular 16, and SQL.</b>
+                            Skilled in all development phases, ensuring performance, quality, security, and user-centric
+                            solutions.
+                        </p>
+                    </div>
+                    <div class="contact-info">
+                        <p><a href="mailto:Pavanpuppala1616@gmail.com">Pavanpuppala1616@gmail.com</a></p>
+                        <p><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+                        <p><a href="https://www.yourwebsite.com" target="_blank">Portfolio</a></p>
+                    </div>
+                </div>
+
+                <div class="expertise">
+                    <div class="expertise-header">Skills</div>
+                    <div class="expertise-list">
+                        <p><b>Languages:</b> C#, TypeScript, SQL</p>
+                        <p><b>Front-end:</b> Angular (V16), AngularJS, HTML, CSS, Bootstrap</p>
+                        <p><b>Back-end:</b> .NET Core, ASP.NET, ADO .NET, Entity Framework</p>
+                        <p><b>Web Services:</b> Web API, API Integration, RESTful Services</p>
+                        <p><b>Tools & Environment:</b> Visual Studio, VS Code, SSMS, GitHub</p>
+                    </div>
+                </div>
+
+                <div class="job-history">
+                    <div class="job-header">Experience</div>
+                    <div class="job-entry">
+                        <div class="job-date">
+                            <a href="#">Fixity Tech. Pvt. Ltd</a>
+                            <p>Jul’2022 - Jan’2023</p>
+                        </div>
+                        <div class="job-description">
+                            <h1>Jr .NET Developer</h1>
+                            <p>Developed scalable <b>Healthcare Solutions with .NET Core, Angular, and SQL Server</b>
+                                for enhanced performance and efficiency.</p>
+                            <ul>
+                                <li>Developed healthcare management solutions using .NET Core, Angular, and SQL Server.
+                                </li>
+                                <li>Designed responsive UIs, improving user experience across platforms.</li>
+                                <li>Integrated real-time data processing with SQL Server to enhance operational
+                                    efficiency.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="job-entry">
+                        <div class="job-date">
+                            <a href="#">Ehnote Softlabs (P) LTD.</a>
+                            <p>Feb’2023 - Mar’2024</p>
+                        </div>
+                        <div class="job-description">
+                            <h1>Software Engineer</h1>
+                            <p>Developed scalable healthcare solutions with <b>.NET Core, Angular, and SQL Server</b>
+                            </p>
+                            <ul>
+                                <li>Developed and maintained scalable solutions for healthcare management.</li>
+                                <li>Designed responsive UIs with Angular/AngularJS to enhance accessibility.</li>
+                                <li>Utilized real-time data processing to improve decision-making efficiency.</li>
+                                <li>Applied agile methodologies for iterative software updates and testing.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="academic-qualification">
+                    <div class="job-header">Education</div>
+                    <div class="academic-entry">
+                        <div class="academic-date">
+                            <a href="#">M.Tech</a>
+                            <p>2022-2023</p>
+                        </div>
+                        <div class="academic-description">
+                            <h1>Master's Degree</h1>
+                            <p><b>Computer Science and Engineering (CSE)</b></p>
+                            <ul>
+                                <li>Completed Master’s degree under Jawaharlal Nehru Technological University Kakinada
+                                    (JNTUK), specializing in advanced software development.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="academic-entry">
+                        <div class="academic-date">
+                            <a href="#">B.Tech</a>
+                            <p>2018-2022</p>
+                        </div>
+                        <div class="academic-description">
+                            <h1>Bachelor of Technology</h1>
+                            <p><b>Computer Science and Engineering (CSE)</b></p>
+                            <ul>
+                                <li>Completed Bachelor's degree in CSE under Jawaharlal Nehru Technological University
+                                    Kakinada (JNTUK).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('download-CV').addEventListener('click', function () {
+            const content = document.getElementById('cv-wrapper');  // Content for document download
+
+            // Temporarily make the content visible for rendering in the PDF
+            content.style.display = 'block';
+
+            const opt = {
+                margin: [0.2, 0.5, 0.5, 0.5],
+                filename: 'CV_Pavan_Kumar_Puppala.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'letter',
+                    orientation: 'portrait'
+                }
+            };
+
+            // Generate the PDF
+            html2pdf().set(opt).from(content).save().then(() => {
+                // Hide the content again after generating the PDF
+                content.style.display = 'none';
+            });
+        });
+    </script>
+
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Frontend visible content styles */
+        #main-content {
+            text-align: center;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+
+        #main-content h1 {
+            font-size: 10px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: rgba(145, 13, 13, .8);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+            border-radius: 5px;
+            margin-left: 14%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(145, 13, 13, .8);
+        }
+
+        /* CV Document Styles */
+        .cv-wrapper {
+            /* display: none; */
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: linear-gradient(145deg, #ffffff, #f1f1f1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* CV Header */
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .profile-image img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-summary {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .profile-summary h1 {
+            font-size: 26px;
+            color: #BB1E1E;
+            margin-bottom: 10px;
+        }
+
+        .profile-summary h2 {
+            font-size: 20px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .profile-summary p {
+            font-size: 16px;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #BB1E1E;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #007BFF;
+        }
+
+        /* Skills Section */
+        .expertise {
+            margin-top: 30px;
+        }
+
+        .expertise-header {
+            font-size: 24px;
+            color: #BB1E1E;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #BB1E1E;
+            padding-bottom: 10px;
+        }
+
+        .expertise-list {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Experience Section */
+        .job-history {
+            margin-top: 30px;
+        }
+
+        .job-header {
+            font-size: 24px;
+            color: #BB1E1E;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #BB1E1E;
+            padding-bottom: 10px;
+        }
+
+        .job-entry {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .job-date {
+            flex: 1;
+            font-size: 16px;
+            color: #777;
+        }
+
+        .job-description {
+            flex: 3;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .job-description h1 {
+            font-size: 20px;
+            color: #BB1E1E;
+        }
+
+        .job-description ul {
+            margin-top: 10px;
+        }
+
+        .job-description li {
+            margin-bottom: 8px;
+        }
+
+        /* Education Section */
+        .academic-qualification {
+            margin-top: 30px;
+        }
+
+        .academic-entry {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .academic-header {
+            font-size: 24px;
+            color: #BB1E1E;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #BB1E1E;
+            padding-bottom: 10px;
+        }
+
+        .academic-date {
+            flex: 1;
+            font-size: 16px;
+            color: #777;
+        }
+
+        .academic-description {
+            flex: 3;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .academic-description ul li {
+            list-style: none;
+        }
+    </style>
